@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    
+}
+nav {
+    width: 100%;
+    position: sticky !important;;
+    left: 0;
+    top: 0;
+    box-shadow: 0px 5px 8px rgba(0,0,0,.5);
+    z-index: 10;
+
+}  
+.navbar-brand{
+    font-weight: 600;
+}
+.nav-link{
+    color: white !important;
+    border-bottom: 1px solid transparent;
+
+}
+.nav-link:hover{
+    border-bottom: 1px solid white;
+}
+
+#content {
+    width: 100%;
+    height: 100vh;
+    background-image: url("images/myown.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: black;
+    display: block;
+    justify-content: center;
+    /*text-align: optional*/ 
+    padding-top: 250px;
+
+}
+
+#content p {
+    font-size: large;
+    font-weight: 600;
+
+    animation: ease-in-out 2s text;
+}
+
+@keyframes text {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+#content p:nth-child(0) {
+    animation-delay: 0;
+}
+
+#content p:nth-child(1) {
+    animation-delay: 1s;
+}
+
+#content p:nth-child(2) {
+    animation-delay: 2s;
+}
+/*About Section*/
+#about {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+}
+
+.circle {
+    width: 400px;
+    height: 400px;
+    background: yellow;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.6);
+    margin-bottom: 3%;
+    margin-top: 5%;
+}
+
+.circle img {
+
+    position: absolute;
+    height: 250px;
+    top: -20%;
+    left: 6%;
+    filter: drop-shadow(0px 20px 20px rgba(0, 0, 0, .6));
+
+}
+
+.circle:hover {
+    width: 500px;
+    height: 400px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.circle:hover img {
+    position: absolute;
+    top: 0;
+    left: 0%;
+    transition: 1s;
+}
+
+.circle .content {
+    opacity: 0;
+}
+
+.circle:hover .content {
+    position: absolute;
+    top: 15%;
+    right: 0;
+    color: black;
+    width: 50%;
+    opacity: 1;
+    transition: 1s;
+}
+
+img {
+    border-radius: 20%;
+}
+
+/*Education Section*/
+
+#education {
+    width: 100%;
+    height: 100vh;
+    background: black;
+}
+
+.edu .edu-image img {
+
+    display: block;
+    height: 250px;
+    filter: drop-shadow(0px 20px 20px rgba(121, 51, 51, 0.6));
+
+}
+
+.edu-heading {
+    text-align: center;
+   
+    color: white;
+
+}
+
+.edu {
+    background: black;
+    position: relative;
+    padding: 20px;
+}
+
+.edu-content {
+    display: flex;
+    flex-direction: column;
+  
+}
+
+.edu-text {
+    display: none;
+    position: absolute;
+    width: 50%;
+    color: white;
+    top: 25%;
+    background:rgba(0, 0, 0, .6);
+}
+
+.edu-image {
+    position: relative;
+    left: 20px;
+    padding: 20px 0;
+}
+
+.edu:hover .edu-image {
+    left: 80%;
+    transition:2s;
+
+
+}
+
+.edu:hover .edu-text {
+    z-index: 1;
+    text-align: center;
+    display: block;
+    float: left;
+    animation: 2s ease-in text;
+    
+}
+@keyframes text{
+    0%{
+        opacity:0 ;
+       } 
+    50%{
+    opacity: 0.5; ;
+   } 
+   100%{
+    opacity:1 ;
+   } 
+}
